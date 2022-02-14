@@ -23,10 +23,10 @@ public class SliderController : MonoBehaviour
     {
             yield return new WaitForSeconds(0.5f);
             sliderLerp = true;
-            StartCoroutine(IncreaseSliderOverTime(0.3f));
-            yield return new WaitForSeconds(0.7f);
-            StartCoroutine(DecreaseSliderOverTime(0.3f));
-            yield return new WaitForSeconds(0.7f);
+            StartCoroutine(IncreaseSliderOverTime(0.7f));
+            yield return new WaitForSeconds(0.9f);
+            StartCoroutine(DecreaseSliderOverTime(0.7f));
+            yield return new WaitForSeconds(0.9f);
             StartCoroutine(SliderIncreaseAndDecrease());
     }
 
@@ -42,6 +42,8 @@ public class SliderController : MonoBehaviour
             if (slider.value >= minRange && slider.value <= maxRange)
             {
                 Debug.Log("Good");
+                sliderLerp = false;
+                StopAllCoroutines();
             }
             else
             {
