@@ -1,0 +1,472 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3946596834272924594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3946596834272924592}
+  - component: {fileID: 3946596834272924595}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3946596834272924592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946596834272924594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08002948, y: 0.22050618, z: -0.018788695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3946596834272924595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946596834272924594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2619311c29ca58d4487f363db7b34d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalMoves: 0
+  checkLevel: 0
+  currentDay: 0
+  currentLevel: 0
+  currentSubLevel: 0
+  currentBonusLevel: 0
+  currentVIPLevel: 0
+  customer1: 0
+  customer2: 0
+  customer3: 0
+  customerIndex: 0
+  customerSet: 0
+  LikesCount: 0
+  currentRequestType: 0
+  currentOysterPrefabs: []
+  dayCount: 0
+  levelCount: 0
+  bonusLevelCount: 0
+  vipLevelCount: 0
+  totalLevelCount: 0
+  isBonusLevel: 0
+  isVIPLevel: 0
+  day:
+  - name: Day 1
+    level:
+    - name: 1
+      sprite: {fileID: 21300000, guid: cfe593b26824f6040bd32214f90c5282, type: 3}
+      requestType: 0
+      oysterPrefab:
+      - Oyster 1
+      - 'Oyster '
+      subLevel:
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_01_Day_1
+        levelType: 0
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 2
+      sprite: {fileID: 21300000, guid: 1bd172457a279c84b838b0352710b7bc, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterEatingScene_v1
+        levelPrefab: OysterEating_Level
+        levelType: 4
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 3
+      sprite: {fileID: 21300000, guid: 7b5a348a9125f7a41b85489304e4826d, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: SortingScene
+        levelPrefab: SortingLevel_01v2
+        levelType: 1
+      bonusLevel: 0
+      vipLevel: 0
+    - name: 4
+      sprite: {fileID: 21300000, guid: ec05eeae45ae0dd4c8f5c31b14921285, type: 3}
+      requestType: 2
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: NecklaceScene
+        levelPrefab: NecklaceLevel_01_Day_1
+        levelType: 5
+      bonusLevel: 0
+      vipLevel: 1
+  - name: Day 2
+    level:
+    - name: 1
+      sprite: {fileID: 21300000, guid: 85f3e9975cc53d248a0b31cd6c38736f, type: 3}
+      requestType: 1
+      oysterPrefab:
+      - Oyster 1
+      - Oyster 2
+      - Oyster
+      - Oyster 1
+      - Oyster 2
+      - Oyster
+      subLevel:
+      - scenePrefab: DivingScene
+        levelPrefab: DivingLevel_01_Day_2
+        levelType: 2
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 2
+      sprite: {fileID: 21300000, guid: 545d56b1755afe04c97b0d3ddd7cd79e, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterCleaningScene_01
+        levelPrefab: CleaningLevel_01_Day_2
+        levelType: 3
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_02_Day_2
+        levelType: 0
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 3
+      sprite: {fileID: 21300000, guid: b2ec8a68eaf2c6047af6fb09c9e0fe73, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: SortingScene
+        levelPrefab: SortingLevel_02v2_Day_2
+        levelType: 1
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 4
+      sprite: {fileID: 21300000, guid: ec05eeae45ae0dd4c8f5c31b14921285, type: 3}
+      requestType: 2
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: NecklaceScene
+        levelPrefab: NecklaceLevel_02_Day_2
+        levelType: 5
+      bonusLevel: 0
+      vipLevel: 1
+  - name: Day 3
+    level:
+    - name: 1
+      sprite: {fileID: 21300000, guid: 85f3e9975cc53d248a0b31cd6c38736f, type: 3}
+      requestType: 1
+      oysterPrefab:
+      - Oyster 1
+      - Oyster
+      - Oyster 2
+      - Oyster 1
+      - Oyster 2
+      - Oyster 1
+      subLevel:
+      - scenePrefab: DivingScene
+        levelPrefab: DivingLevel_02_Day_3
+        levelType: 2
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 2
+      sprite: {fileID: 21300000, guid: c4d9a490ea127c74da99c15826b4cf26, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterCleaningScene_01
+        levelPrefab: CleaningLevel_02_Day_3
+        levelType: 3
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_03_Day_3
+        levelType: 0
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 3
+      sprite: {fileID: 21300000, guid: b77f0da06c71c7a45a682c12b67a78ae, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: SortingScene
+        levelPrefab: SortingLevel_03v2_Day_3
+        levelType: 1
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 4
+      sprite: {fileID: 21300000, guid: ec05eeae45ae0dd4c8f5c31b14921285, type: 3}
+      requestType: 2
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: NecklaceScene
+        levelPrefab: NecklaceLevel_03_Day_3
+        levelType: 5
+      bonusLevel: 0
+      vipLevel: 0
+    - name: 5
+      sprite: {fileID: 21300000, guid: 85f3e9975cc53d248a0b31cd6c38736f, type: 3}
+      requestType: 1
+      oysterPrefab:
+      - Oyster 1
+      - Oyster
+      - Oyster
+      - Oyster 1
+      - Oyster
+      - Oyster 2
+      subLevel:
+      - scenePrefab: DivingScene
+        levelPrefab: DivingLevel_03_Day_3
+        levelType: 2
+      bonusLevel: 0
+      vipLevel: 1
+  - name: Day 4
+    level:
+    - name: 1
+      sprite: {fileID: 21300000, guid: ad52151aeaa39794c86f0581fc8ae87d, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterCleaningScene_01
+        levelPrefab: CleaningLevel_03_Day_4
+        levelType: 3
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_04_Day_4
+        levelType: 0
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 2
+      sprite: {fileID: 21300000, guid: 078d4dedf920b0542a9cbdfac9ffa34e, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: SortingScene
+        levelPrefab: SortingLevel_04v2_Day_4
+        levelType: 1
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 3
+      sprite: {fileID: 21300000, guid: ec05eeae45ae0dd4c8f5c31b14921285, type: 3}
+      requestType: 2
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: NecklaceScene
+        levelPrefab: NecklaceLevel_04_Day_4
+        levelType: 5
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 4
+      sprite: {fileID: 21300000, guid: 1539d59a5cba0e5459bc6f2226fbd45f, type: 3}
+      requestType: 1
+      oysterPrefab:
+      - Oyster 1
+      - Oyster 2
+      - Oyster
+      - Oyster 2
+      - Oyster 1
+      - Oyster 2
+      - Oyster 1
+      - Oyster
+      - Oyster
+      subLevel:
+      - scenePrefab: DivingScene
+        levelPrefab: DivingLevel_04_Day_4
+        levelType: 2
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 5
+      sprite: {fileID: 21300000, guid: 6c71a4ce62706734bad873c8216ff8d7, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterCleaningScene_01
+        levelPrefab: CleaningLevel_04_Day_4
+        levelType: 3
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_05_Day_4
+        levelType: 0
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 6
+      sprite: {fileID: 21300000, guid: e1c12b2163e42174796a21c75cedb6c5, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: SortingScene
+        levelPrefab: SortingLevel_05v2_Day_4
+        levelType: 1
+      bonusLevel: 0
+      vipLevel: 1
+  - name: Day 5
+    level:
+    - name: 1
+      sprite: {fileID: 21300000, guid: ec05eeae45ae0dd4c8f5c31b14921285, type: 3}
+      requestType: 2
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: NecklaceScene
+        levelPrefab: NecklaceLevel_05_Day_5
+        levelType: 5
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 2
+      sprite: {fileID: 21300000, guid: 37c7b7e223f354940bdba28f7d9dfec3, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterCleaningScene_01
+        levelPrefab: CleaningLevel_05_Day_5
+        levelType: 3
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_06_Day_5
+        levelType: 0
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 3
+      sprite: {fileID: 21300000, guid: 1539d59a5cba0e5459bc6f2226fbd45f, type: 3}
+      requestType: 1
+      oysterPrefab:
+      - Oyster 1
+      - Oyster
+      - Oyster
+      - Oyster 2
+      - Oyster 2
+      - Oyster 1
+      - Oyster
+      - Oyster 2
+      - Oyster
+      subLevel:
+      - scenePrefab: DivingScene
+        levelPrefab: DivingLevel_05_Day_5
+        levelType: 2
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 4
+      sprite: {fileID: 21300000, guid: a45c4dd13f53a094f8680f0621e30761, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: SortingScene
+        levelPrefab: SortingLevel_06v2_Day_5
+        levelType: 1
+      bonusLevel: 0
+      vipLevel: 1
+    - name: 5
+      sprite: {fileID: 21300000, guid: 195b57851905fc64db91486e0659eead, type: 3}
+      requestType: 0
+      oysterPrefab: []
+      subLevel:
+      - scenePrefab: OysterScene
+        levelPrefab: OysterLevel_07_Day_5
+        levelType: 0
+      bonusLevel: 1
+      vipLevel: 0
+    - name: 6
+      sprite: {fileID: 21300000, guid: 8aa52638b6eba2741b3ae05ed78535cb, type: 3}
+      requestType: 1
+      oysterPrefab:
+      - Oyster 1
+      - Oyster
+      - Oyster 2
+      - Oyster
+      - Oyster 2
+      - Oyster
+      - Oyster 1
+      - Oyster 2
+      - Oyster
+      - Oyster 1
+      - Oyster 2
+      - Oyster
+      subLevel:
+      - scenePrefab: DivingScene
+        levelPrefab: DivingLevel_06_Day_5
+        levelType: 2
+      bonusLevel: 0
+      vipLevel: 0
+  bonusLevels:
+  - name: Ring Runner 1
+    level:
+      scenePrefab: Ring_Runner_Scene
+      levelPrefab: Ring_Runner_level 1
+      levelType: 8
+  - name: Diving Runner 1
+    level:
+      scenePrefab: Diving_v2_Scene
+      levelPrefab: Diving_v2_level_1
+      levelType: 7
+  - name: Ring Runner 2
+    level:
+      scenePrefab: Ring_Runner_Scene
+      levelPrefab: Ring_Runner_level 2
+      levelType: 8
+  - name: Diving Runner 2
+    level:
+      scenePrefab: Diving_v2_Scene
+      levelPrefab: Diving_v2_level_2
+      levelType: 7
+  - name: Ring Runner 3
+    level:
+      scenePrefab: Ring_Runner_Scene
+      levelPrefab: Ring_Runner_level 3
+      levelType: 8
+  - name: Diving Runner 3
+    level:
+      scenePrefab: Diving_v2_Scene
+      levelPrefab: Diving_v2_level_3
+      levelType: 7
+  - name: Ring Runner 4
+    level:
+      scenePrefab: Ring_Runner_Scene
+      levelPrefab: Ring_Runner_level 4
+      levelType: 8
+  vipLevels:
+  - name: VIP Level 1
+    sprite: {fileID: 21300000, guid: e13ba1d930cefad4d9c400a46b7d5c91, type: 3}
+    levelType: 0
+    requestedItem: Necklace
+    customerID: 0
+    level:
+      scenePrefab: VIP_Scene
+      levelPrefab: VIP_Level_1
+      levelType: 9
+  - name: VIP Level 2
+    sprite: {fileID: 21300000, guid: 48df12f983ddbfb4c826c7965e2ceac4, type: 3}
+    levelType: 1
+    requestedItem: Eyepatch
+    customerID: 1
+    level:
+      scenePrefab: VIP_Scene
+      levelPrefab: VIP_Level_2
+      levelType: 9
+  - name: VIP Level 3
+    sprite: {fileID: 21300000, guid: a64b670d14738894986341253dfc58d8, type: 3}
+    levelType: 2
+    requestedItem: Tiara
+    customerID: 2
+    level:
+      scenePrefab: VIP_Scene
+      levelPrefab: VIP_Level_3
+      levelType: 9
+  - name: VIP Level 4
+    sprite: {fileID: 21300000, guid: 7a473dfaa487c57448b33a7d17c401be, type: 3}
+    levelType: 3
+    requestedItem: Rapper_Chain
+    customerID: 3
+    level:
+      scenePrefab: VIP_Scene
+      levelPrefab: VIP_Level_4
+      levelType: 9
+  loadedLevel: {fileID: 0}
+  loadedScene: {fileID: 0}
+  customerScene: {fileID: 0}
+  levelStartType: 
+  totalLevels: 
+  dayLevelProgress: 
