@@ -21,10 +21,11 @@ public class SliderController : MonoBehaviour
     }
     IEnumerator SliderIncreaseAndDecrease()
     {
-        
-            StartCoroutine(IncreaseSliderOverTime(0.6f));
+            yield return new WaitForSeconds(0.5f);
+            sliderLerp = true;
+            StartCoroutine(IncreaseSliderOverTime(0.3f));
             yield return new WaitForSeconds(0.7f);
-            StartCoroutine(DecreaseSliderOverTime(0.6f));
+            StartCoroutine(DecreaseSliderOverTime(0.3f));
             yield return new WaitForSeconds(0.7f);
             StartCoroutine(SliderIncreaseAndDecrease());
     }
@@ -37,7 +38,7 @@ public class SliderController : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             
-            sliderLerp = false;
+            //sliderLerp = false;
             if (slider.value >= minRange && slider.value <= maxRange)
             {
                 Debug.Log("Good");
@@ -45,6 +46,11 @@ public class SliderController : MonoBehaviour
             else
             {
                 Debug.Log("Bad Timing");
+                sliderLerp = false;
+                StopAllCoroutines();
+                slider.value = 0;
+               
+                StartCoroutine(SliderIncreaseAndDecrease());
             }
             
         }
