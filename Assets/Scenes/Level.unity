@@ -1759,7 +1759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941287160}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.01, y: 8.26, z: -110.9}
+  m_LocalPosition: {x: -0.1, y: 2.74, z: -110.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1956,6 +1956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652252681225}
   - component: {fileID: 919132148328951476}
+  - component: {fileID: 919132148328951477}
   m_Layer: 0
   m_Name: Plastic_Dropper_Bottle
   m_TagString: Untagged
@@ -1977,6 +1978,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1941287162}
   isItemMovable: 0
+--- !u!95 &919132148328951477
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148328951475}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53f49e47541756c4b865a5ab421d6781, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &1863191399956096697
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2153,6 +2173,7 @@ GameObject:
   - component: {fileID: 2938334391383550155}
   - component: {fileID: 5780927229249793919}
   - component: {fileID: 2740107316878145115}
+  - component: {fileID: 5090062053526766033}
   m_Layer: 0
   m_Name: pCylinder9
   m_TagString: Untagged
@@ -2160,6 +2181,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &5090062053526766033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090062053526766032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 050aa056ad5ddd645bd1ac703e0e694a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5390767248291533574
 PrefabInstance:
   m_ObjectHideFlags: 0
