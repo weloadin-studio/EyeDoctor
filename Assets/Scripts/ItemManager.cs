@@ -50,7 +50,7 @@ public class ItemManager : MonoBehaviour
         //}
         if(isItemMovable == false)
         {
-            transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.317f));
+            transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.3185f));
         }
            
     }
@@ -71,7 +71,7 @@ public class ItemManager : MonoBehaviour
                 while (materialColor.a>=0.5f)
                 {
                     yield return new WaitForSecondsRealtime(0.5f);
-                    materialColor.a -= 0.050f;
+                    materialColor.a -= 0.1f;
                     redEyeMaterial.color = materialColor;
                    // yield return new WaitForSecondsRealtime(1f);
                 }
@@ -86,7 +86,7 @@ public class ItemManager : MonoBehaviour
                     //yield return new WaitForSecondsRealtime(1f);
                 }
 
-                yield return new WaitForSecondsRealtime(4f);
+                yield return new WaitForSecondsRealtime(2f);
                 bottleAnimator.SetBool("EyeDrops", false);
                
                 yield return new WaitForSecondsRealtime(1f);
