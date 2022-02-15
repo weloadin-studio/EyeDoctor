@@ -67,15 +67,25 @@ public class ItemManager : MonoBehaviour
                 bottleCap.SetActive(false);
                 bottleAnimator.SetBool("EyeDrops", true);
                 yield return new WaitForSecondsRealtime(1f);
-                for (int i=1; i<=4; i++)
+                LeanPool.Spawn(eyeDropPrefab, eyeDropSpawnPosition.position, Quaternion.identity);
+                while (materialColor.a>=0.5f)
                 {
-                    LeanPool.Spawn(eyeDropPrefab, eyeDropSpawnPosition.position, Quaternion.identity);
                     yield return new WaitForSecondsRealtime(0.5f);
-                    materialColor.a -= 0.25f;
+                    materialColor.a -= 0.050f;
+                    redEyeMaterial.color = materialColor;
+                   // yield return new WaitForSecondsRealtime(1f);
+                }
+                LeanPool.Spawn(eyeDropPrefab, eyeDropSpawnPosition.position, Quaternion.identity);
+                while (materialColor.a>0f && materialColor.a <0.5f)
+                {
+                    yield return new WaitForSecondsRealtime(0.5f);
+                    materialColor.a -= 0.1f;
+                   
                     //Debug.Log(materialColor.a);
                     redEyeMaterial.color = materialColor;
-                    yield return new WaitForSecondsRealtime(1f);
+                    //yield return new WaitForSecondsRealtime(1f);
                 }
+
                 yield return new WaitForSecondsRealtime(4f);
                 bottleAnimator.SetBool("EyeDrops", false);
                
