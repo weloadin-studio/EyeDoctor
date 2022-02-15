@@ -6,6 +6,9 @@ public class ItemManager : MonoBehaviour
 {
     public Camera cam;
     public bool isItemMovable = false;
+    public Transform leftLimit, rightLimit, upperLimit, bottomLimit;
+    public Animator bottleAnimator, capAnimator;
+    public GameObject bottleCap;
     //Ray ray;
     //RaycastHit hit;
 
@@ -21,6 +24,7 @@ public class ItemManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             isItemMovable = !isItemMovable;
+            StartCoroutine(EyeDrop());
         }
         //ray = cam.ScreenPointToRay(Input.mousePosition);
         //if(Physics.Raycast(ray, out hit))
@@ -29,8 +33,26 @@ public class ItemManager : MonoBehaviour
         //}
         if(isItemMovable == false)
         {
-            transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.35f));
+            transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.32f));
         }
            
+    }
+
+    IEnumerator EyeDrop()
+    {
+        while (isItemMovable == true)
+        {
+            if (this.transform.position.x >= leftLimit.position.x && this.transform.position.x <= rightLimit.position.x && this.transform.position.z >= bottomLimit.position.z && this.transform.position.z <= upperLimit.position.z)
+            {
+                capAnimator.SetBool("Cap", true);
+                yield return new WaitForSeconds(1f);
+                bottleCap.SetActive(false);
+                bottleAnimator.SetBool("EyeDrops", true);
+                yield return new WaitForSeconds(2f);
+                bottleAnimator.SetBool("EyeDrops", false);
+
+            }
+            yield return null;
+        }
     }
 }
